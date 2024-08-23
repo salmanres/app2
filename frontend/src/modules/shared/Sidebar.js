@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Fragment, useEffect, useState } from 'react';
 import { FiMenu } from "react-icons/fi";
 import { Link, useParams } from 'react-router-dom';
+import { backendapi } from '../../ServicePage';
 
 function Sidebar() {
 
@@ -9,7 +10,7 @@ function Sidebar() {
   const [userData, setUserData] = useState([]);
 
   const getUserData = async () => {
-    const response = await axios.get(`http://localhost:3500/userdata/${id}`);
+    const response = await axios.get(`${backendapi}/userdata/${id}`);
     console.log(response.data);
     setUserData(response.data);
   }

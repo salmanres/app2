@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { backendapi } from '../../ServicePage';
 
 function UserDetails() {
   const pageNavigate = useNavigate();
@@ -10,7 +11,7 @@ function UserDetails() {
   const [userData, setUserData] = useState([]);
 
   const getUserData = async () => {
-    const response = await axios(`http://localhost:3500/userdata/${id}`);
+    const response = await axios(`${backendapi}/userdata/${id}`);
     setUserData(response.data);
   }
 

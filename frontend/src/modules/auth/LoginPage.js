@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import NavbarSimple from '../shared/NavbarSimple';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { backendapi } from '../../ServicePage';
 
 function LoginPage() {
 
@@ -23,7 +24,7 @@ function LoginPage() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:3500/login", loginData);
+      const response = await axios.post(`${backendapi}/login`, loginData);
       console.log("user logged in", response.data);
       alert("login successful");
       appNaviagtion(`/search/${response.data._id}`);

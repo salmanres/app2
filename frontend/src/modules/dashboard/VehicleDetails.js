@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Fragment, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import NavbarSimple from '../shared/NavbarSimple';
+import { backendapi } from '../../ServicePage';
 
 function VehicleDetails() {
 
@@ -9,7 +10,7 @@ function VehicleDetails() {
     const [vehData, setVehData] = useState([]);
 
     const getvehData = async () => {
-        const response = await axios.get(`http://localhost:3500/vehdetails/${id}`);
+        const response = await axios.get(`${backendapi}/vehdetails/${id}`);
         console.log(response.data);
         setVehData(response.data);
     }

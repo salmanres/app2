@@ -1,13 +1,14 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { backendapi } from '../../ServicePage';
 
 function ActiveUsers() {
     const [userData, setUserData] = useState([]);
 
     const getUserData = async () => {
         try {
-            const response = await axios.get("http://localhost:3500/userdata");
+            const response = await axios.get(`${backendapi}/userdata`);
             setUserData(response.data);
             console.log(response.data); // Log the response data
         } catch (error) {
