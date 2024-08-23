@@ -1,0 +1,264 @@
+body {
+    overflow-x: hidden;
+    /* background-color: lightgray; */
+}
+
+.navbar {
+    background-image: url("../images/nav-background.svg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    height: 55px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.menu-btn {
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    margin-top: -7px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 38px;
+    float: right;
+    cursor: pointer;
+    color: white;
+    margin-top: -8px;
+}
+
+.logo {
+    color: white !important;
+    line-height: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 4px;
+}
+
+.logo2 {
+    font-size: 9px;
+    line-height: 0px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.welcome-msg {
+    color: #444f5a;
+}
+
+.custom-offcanvas {
+    width: 240px !important;
+    background-image: url("../images/bg-main.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.side-nav {
+    list-style-type: none;
+}
+
+.side-nav>li {
+    text-decoration: none;
+}
+
+.landing-page {
+    background-image: url("../images/bg-main.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.form {
+
+    position: relative;
+}
+
+.form .fa-search {
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #444f5a;
+    font-size: 25px;
+}
+
+.fa-microphone {
+    font-size: 22px;
+    color: #444f5a;
+    margin-left: 13px;
+    margin-top: -6px;
+}
+
+.form span {
+
+    position: absolute;
+    right: 17px;
+    top: 9px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan {
+    padding-left: 7px;
+}
+
+.left-pan i {
+
+    padding-left: 10px;
+}
+
+.form-input {
+    height: 45px;
+    text-indent: 33px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.form-input:focus {
+    border: 1px solid lightgray;
+    outline: none; 
+    box-shadow: none; 
+    -webkit-box-shadow: none; 
+    -moz-box-shadow: none;
+}
+
+.form-input::placeholder {
+    font-weight: 400;
+    color: #d1d5db;
+}
+
+.login-navbar {
+    background-image: url("../images/nav-background.svg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    height: 55px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+
+.logo-2 {
+    margin-top: 11px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 1px;
+  }
+  .checkbox {
+    width: 18px !important; 
+    height: 18px !important; 
+    margin-right: 5px;
+  }
+  .remember-me span {
+    position: relative;
+    margin-top: -2px;
+    margin-left: 3px;
+  }
+.admin-box {
+    height: 80px;
+    width: 48%;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 7px;
+    color: rgb(46, 44, 44);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.admin-box-link
+{
+    text-decoration: none;
+    color: #444f5a;
+}
+
+.btn-icon {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.users-list {
+    text-decoration: none;
+    color: #444f5a;
+    display: block; 
+    margin-top: 5px;
+}
+.card-img-top
+{
+    width: 70px;
+    margin: auto;
+    padding-top: 25px;
+}
+.no-border-radius
+{
+    border-radius: 0px !important;
+}
+.info-bar
+{
+ text-align: center;
+ background-color: lightgray;
+ padding: 5px;
+ color: #444f5a;
+ font-weight: 700;
+ border-radius: 1px;
+ margin-bottom: -5px;
+ z-index: 100;
+ height: 30px;
+}
+.laoder
+{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-weight: 700;
+}
+.offcanvas-close-btn
+{
+    position: absolute;
+    z-index: 1000;
+    right: 0 !important;
+    padding: 40px 40px 0 0;
+}
+.result-div
+{
+    height: 40px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;  
+  
+}
+.result-link
+{
+    text-decoration: none;
+    color: #444f5a;
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 44px;
+}
+.btn-secondary
+{
+    font-weight: 500;
+}
