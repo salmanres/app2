@@ -9,7 +9,7 @@ const newUserData = require("../schema/newUserSchema");
 
 appRoute.get("/", async (req, res) => {
     let vehicleDetails = await record.find();
-    res.send(vehicleDetails);
+    res.send("welcome to vehicle details app");
 })
 
 appRoute.get("/userdata", async (req, res) => {
