@@ -205,7 +205,7 @@ body {
 {
     width: 70px;
     margin: auto;
-    padding-top: 25px;
+    padding-top: -45px;
 }
 .no-border-radius
 {
@@ -261,4 +261,21 @@ body {
 .btn-secondary
 {
     font-weight: 500;
+}
+.admin-button
+{
+    font-size: 13px;
+    font-weight: 700;
+    border: 2px solid #444f5a;
+}
+.back-btn
+{
+    border: none;
+    text-align: left;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 0;
+    margin-top: -0px;
+    margin-left: 13px;
+    margin-bottom: 3px;
 }

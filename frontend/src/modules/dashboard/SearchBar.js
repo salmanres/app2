@@ -4,7 +4,6 @@ import { LuSearch } from "react-icons/lu";
 import { HiMiniMicrophone } from "react-icons/hi2";
 import Navbar from '../shared/Navbar';
 import { Link, useParams } from 'react-router-dom';
-import { backendapi } from '../../ServicePage';
 
 function SearchBar() {
   const [query, setQuery] = useState("");
@@ -14,7 +13,7 @@ function SearchBar() {
     const fetchResults = async () => {
       if (query.length > 2) {
         try {
-          const response = await axios.get(`${backendapi}/search`, {
+          const response = await axios.get(`http://localhost:3500/search`, {
             params: { query }
           });
           setResults(response.data);

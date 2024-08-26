@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { backendapi } from '../../ServicePage';
 
 function BlacklistedUsers() {
 
@@ -9,7 +8,7 @@ function BlacklistedUsers() {
 
     const getUserData = async () => {
         try {
-            const response = await axios.get(`${backendapi}/blacklisted`);
+            const response = await axios.get("http://localhost:3500/blacklisted");
             setUserData(response.data);
             console.log(response.data); // Log the response data
         } catch (error) {

@@ -9,7 +9,6 @@ import { AiFillProfile } from "react-icons/ai";
 import { FaCarAlt } from "react-icons/fa";
 import { IoLogOut } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import { backendapi } from '../../ServicePage';
 
 function AdminComponent() {
 
@@ -18,7 +17,7 @@ function AdminComponent() {
 
     const getData = async () => {
         try {
-            const response = await axios.get(`${backendapi}/`);
+            const response = await axios.get("http://localhost:3500/");
             console.log(response.data.length);
             setVehicleData(response.data);
         }
@@ -75,7 +74,7 @@ function AdminComponent() {
                     </div>
                     <div className='border admin-box'>
                         <IoLogOut className='btn-icon' />
-                        <Link to="/admin" className='admin-box-link'>LOGOUT</Link>
+                        <Link to="/" className='admin-box-link'>LOGOUT</Link>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,15 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { backendapi } from '../../ServicePage';
+import { Link, useNavigate } from 'react-router-dom';
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 function ActiveUsers() {
     const [userData, setUserData] = useState([]);
+    const pageNavigate = useNavigate();
 
     const getUserData = async () => {
         try {
-            const response = await axios.get(`${backendapi}/userdata`);
+            const response = await axios.get("http://localhost:3500/userdata");
             setUserData(response.data);
             console.log(response.data); // Log the response data
         } catch (error) {
@@ -24,9 +25,12 @@ function ActiveUsers() {
         <Fragment>
             <div className='container-fluid'>
                 <div className='row justify-content-center'>
-                    <div className='col-lg-12 col-md-12 col-sm-12 col-12 pt-2 mb-5'>
+                    <div className='col-lg-12 col-md-12 col-sm-12 col-12 mb-5'>
 
                         <div class="card">
+                            <button className='btn back-btn' onClick={() => pageNavigate(-1)}>
+                                <IoMdArrowRoundBack />
+                            </button>
                             <div class="card-header text-center">
                                 <b>ACTIVE USERS</b>
                             </div>
