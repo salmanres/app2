@@ -12,7 +12,7 @@ function UserDetails() {
   const [userData, setUserData] = useState([]);
 
   const getUserData = async () => {
-    const response = await axios(`http://localhost:3500/userdata/${id}`);
+    const response = await axios(`${backendapi}/userdata/${id}`);
     setUserData(response.data);
   }
 

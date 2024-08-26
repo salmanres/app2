@@ -12,7 +12,7 @@ function VehicleDetails() {
     const [vehData, setVehData] = useState([]);
 
     const getvehData = async () => {
-        const response = await axios.get(`http://localhost:3500/vehdetails/${id}`);
+        const response = await axios.get(`${backendapi}/vehdetails/${id}`);
         console.log(response.data);
         setVehData(response.data);
     }

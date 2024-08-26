@@ -17,7 +17,7 @@ function AdminComponent() {
 
     const getData = async () => {
         try {
-            const response = await axios.get("http://localhost:3500/");
+            const response = await axios.get(`${backendapi}/`);
             console.log(response.data.length);
             setVehicleData(response.data);
         }

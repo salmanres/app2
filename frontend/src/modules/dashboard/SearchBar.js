@@ -13,7 +13,7 @@ function SearchBar() {
     const fetchResults = async () => {
       if (query.length > 2) {
         try {
-          const response = await axios.get(`http://localhost:3500/search`, {
+          const response = await axios.get(`${backendapi}/search`, {
             params: { query }
           });
           setResults(response.data);

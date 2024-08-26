@@ -4,6 +4,7 @@ import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { backendapi } from '../../ServicePage';
 
 function RegPage() {
 
@@ -24,7 +25,7 @@ function RegPage() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:3500/register", userData);
+      const response = await axios.post(`${backendapi}/register`, userData);
       console.log("User registered:", response.data);
       toast.success("registration Successful! redirecting to admin panel...");
       setTimeout(() => {

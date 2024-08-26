@@ -8,7 +8,7 @@ function BlacklistedUsers() {
 
     const getUserData = async () => {
         try {
-            const response = await axios.get("http://localhost:3500/blacklisted");
+            const response = await axios.get(`${backendapi}/blacklisted`);
             setUserData(response.data);
             console.log(response.data); // Log the response data
         } catch (error) {
