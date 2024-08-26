@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import NavbarSimple from '../shared/NavbarSimple';
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { backendapi } from '../../ServicePage';
 
 function VehicleDetails() {
 

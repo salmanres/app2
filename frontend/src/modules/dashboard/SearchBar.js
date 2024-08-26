@@ -4,6 +4,7 @@ import { LuSearch } from "react-icons/lu";
 import { HiMiniMicrophone } from "react-icons/hi2";
 import Navbar from '../shared/Navbar';
 import { Link, useParams } from 'react-router-dom';
+import { backendapi } from '../../ServicePage';
 
 function SearchBar() {
   const [query, setQuery] = useState("");
