@@ -7,8 +7,7 @@ const bodyParser = require("body-parser");
 appRoute.use(bodyParser.urlencoded({ extended: true }));
 const newUserData = require("../schema/newUserSchema");
 
-appRoute.get("/", async (req, res) => {
-    let vehicleDetails = await record.find();
+appRoute.get("/", (req, res) => {
     res.send("welcome to vehicle details app");
 })
 
@@ -54,8 +53,8 @@ appRoute.get("/search", async (req, res) => {
     res.status(200).json(results);
 });
 
-appRoute.get("/vehdetails/:id", async (req, res)=>{
-    const {id} = req.params;
+appRoute.get("/vehdetails/:id", async (req, res) => {
+    const { id } = req.params;
     const result = await record.findById(id);
     res.send(result);
 });
@@ -63,7 +62,7 @@ appRoute.get("/vehdetails/:id", async (req, res)=>{
 appRoute.post("/login", async (req, res) => {
     let { email, password } = req.body;
     const user = await newUserData.findOne({ email });
-    if (!user || user.blacklisted ) {
+    if (!user || user.blacklisted) {
         res.status(400).json({ message: "invalid username or password" });
     } else {
         res.status(200).json(user);
