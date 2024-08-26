@@ -7,8 +7,7 @@ const bodyParser = require("body-parser");
 appRoute.use(bodyParser.urlencoded({ extended: true }));
 const newUserData = require("../schema/newUserSchema");
 
-appRoute.get("/", async (req, res) => {
-    let vehicleDetails = await record.find();
+appRoute.get("/", (req, res) => {
     res.send("welcome to vehicle details app");
 })
 
